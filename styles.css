@@ -92,8 +92,28 @@ body {
 }
 
 .body__container {
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: lightgray;
 }
 
+.home__section {
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+.flex__container {
+  background-color: bisque;
+}
+
+.section {
+  max-width: 375px;
+}
+
+/* Hero section flex */
 .flex__container {
   display: flex;
   justify-content: center;
@@ -133,21 +153,28 @@ body {
   padding-bottom: 0;
   margin-right: 5px;
 }
-
+/* 
 .hero__container {
-  /* margin: 0 auto; */
-  width: 100%;
-  display: flex;
+  margin: 0 auto; */
+/* display: flex;
   justify-content: center;
-}
+} */
 
 .hero-text__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
   margin: 0 auto;
   margin-top: 3rem;
+}
+
+.hero__button {
+  padding: 1rem;
+  border: 2px solid black;
+  text-align: center;
+  /* margin: 0; */
+  width: 249px;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -180,25 +207,16 @@ body {
   display: inline-block;
 }
 
-.hero__button {
-  padding: 1rem;
-  border: 2px solid black;
-  text-align: center;
-  /* margin: 0; */
-  width: 249px;
-  margin: 0 auto;
-}
-
 .hero__button:hover {
   cursor: pointer;
 }
 
-.section {
-  max-width: 375px;
-}
-
 .hero-img__container {
-  padding: 2rem;
+  /* padding: 10rem; */
+  height: 30rem;
+  width: 30rem;
+
+  background-image: url(img/mapty-large.png);
 }
 /* ////////////////////////////////////////////////////////////////////////PROJECT SECTION////////////////////////////////////////////////////////////////////////////// */
 .project__container {
@@ -208,7 +226,7 @@ body {
   /* padding-right: 1rem; */
   border: 1px solid gray;
   box-shadow: 8px 8px lightgray;
-  width: 70%;
+  width: 262px;
   /* padding: 255px; */
 }
 
@@ -255,7 +273,7 @@ body {
   padding: 0.8rem;
   padding-right: 1rem;
   box-shadow: 8px 8px gray;
-  width: 70%;
+  width: 262px;
 }
 
 .input {
@@ -277,4 +295,99 @@ body {
   padding: 0.5rem 4rem;
   background-color: white;
   border: 2px solid black;
+}
+
+@media (min-width: 900px) {
+  body {
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 100vw;
+    /* background-color: var(--pearl); */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .section {
+    max-width: 1800px;
+  }
+
+  .hero__button {
+    padding: 1rem;
+    border: 2px solid black;
+    text-align: center;
+    /* margin: 0; */
+    width: 249px;
+    margin: 0;
+  }
+
+  .hero-text__container {
+    display: inline;
+    justify-content: center;
+    /* width: 100%; */
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
+  .home__section {
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    /* width: 100%; */
+  }
+
+  /* TESTING */
+  .hero-text {
+    margin: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    display: block;
+    font-size: 1.5rem;
+    text-align: left;
+    /* margin-left: 4rem; */
+  }
+
+  .hero__span--1 {
+    font-size: 4.5rem;
+    line-height: 4.3rem;
+    /* font-family: var(--google__font1);
+    display: block;
+    text-transform: uppercase; */
+  }
+
+  .hero__span--2 {
+    font-size: 4.5rem;
+    line-height: 4.4rem;
+    /* font-family: var(--google__font1); */
+    display: block;
+    /* text-transform: uppercase;  */
+    margin-left: 2.7rem;
+  }
+
+  .hero__span--3 {
+    /* white-space: nowrap; */
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-left: 15px;
+  }
+
+  .hero__button {
+    padding: 1rem;
+    border: 2px solid black;
+    text-align: center;
+    /* margin: 0; */
+    margin: 2rem auto;
+    width: 100%;
+  }
+
+  .hero-img__container {
+    /* padding: 10rem; */
+    height: 30rem;
+    width: 50%;
+    margin-right: 3rem;
+
+    background-image: url(img/mapty-large.png);
+  }
 }
