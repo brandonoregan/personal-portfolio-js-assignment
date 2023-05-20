@@ -1,0 +1,280 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  /* Might change all line colours */
+  --line-black: black;
+  --pearl: #efeae2;
+
+  /* Font-Family */
+  --google__font1: "Russo One", sans-serif;
+  --google__fontPrimary: "Source Code Pro", monospace;
+}
+
+body {
+  width: 100vw;
+  max-width: 375px;
+  margin: 0 auto;
+  /* background-color: var(--pearl); */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body__container {
+}
+
+.flex__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header__container {
+  /* border-bottom: 2px solid var(--line-black); */
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.logo__container {
+  margin-left: 0.5rem;
+  align-self: center;
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.nav__ul {
+  margin-right: 0.5rem;
+}
+
+.nav__li {
+  /* justify-content: space-around; */
+  margin-left: 0.5rem;
+}
+
+.navbar {
+  padding-bottom: 0;
+  margin-right: 5px;
+}
+
+.hero__container {
+  /* margin: 0 auto; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-text__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.hero-text {
+  margin: 0 auto;
+  /* margin-left: 4rem; */
+  padding-right: 0;
+  padding-bottom: 2rem;
+  padding-left: 1.8rem;
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+}
+
+.hero__span--1 {
+  font-size: 3rem;
+  font-family: var(--google__font1);
+  display: block;
+  text-transform: uppercase;
+}
+
+.hero__span--2 {
+  font-size: 3rem;
+  font-family: var(--google__font1);
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 1.8rem;
+}
+
+.hero__span--3 {
+  display: inline-block;
+}
+
+.hero__button {
+  padding: 1rem;
+  border: 2px solid black;
+  text-align: center;
+  /* margin: 0; */
+  width: 249px;
+  margin: 0 auto;
+}
+
+.hero__button:hover {
+  cursor: pointer;
+}
+
+.section {
+  max-width: 375px;
+}
+
+.hero-img__container {
+  padding: 2rem;
+}
+/* ////////////////////////////////////////////////////////////////////////PROJECT SECTION////////////////////////////////////////////////////////////////////////////// */
+.project__container {
+  margin: 1rem auto;
+  height: 255px;
+  border-radius: 0.5rem;
+  /* padding-right: 1rem; */
+  border: 1px solid gray;
+  box-shadow: 8px 8px lightgray;
+  width: 70%;
+  /* padding: 255px; */
+}
+
+.project__container:hover {
+  cursor: pointer;
+}
+
+.html__project {
+  background-image: url(img/html-project-small.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.weather__project {
+  background-image: url(img/weather.png);
+  background-position: center;
+}
+
+.mapty__project {
+  background-image: url(img/mapty-small.png);
+  /* background-repeat: no-repeat; */
+  background-position: cover;
+}
+/* //////////////////////////////////////////////////////////////////////////CONTACT SECTION//////////////////////////////////////////////////////////////////////////// */
+.contact__section {
+  position: relative;
+}
+
+.flex__container {
+  display: flex;
+  justify-content: center;
+}
+
+.project__flex--container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__container {
+  height: 255px;
+  margin: 1rem auto 3rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  padding-right: 1rem;
+  box-shadow: 8px 8px gray;
+  width: 70%;
+}
+
+.input {
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0 0 0.2rem;
+  border: none;
+  background-color: #f5f5f5;
+}
+
+.contact__button--container {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit__button {
+  padding: 0.5rem 4rem;
+  background-color: white;
+  border: 2px solid black;
+}
