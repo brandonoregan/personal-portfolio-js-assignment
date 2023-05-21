@@ -100,6 +100,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+  /* border: 2px solid black; */
 }
 
 header {
@@ -201,17 +202,31 @@ ul {
 
 .about__section {
   display: flex;
-}
-
-.about--left,
-.about--right {
-  width: 50%;
-}
-
-.about--right {
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  justify-content: space-between;
   background-image: url(img/plant__bg--4--smaller.jpg);
   background-repeat: no-repeat;
   background-position: 100%;
-  width: ;
-  padding: 30rem;
+}
+
+.about--title {
+  font-size: 5rem;
+  /* text-shadow: -3px 3px grey; */
+  border-bottom: 2px solid gray;
+  display: inline-block;
+  line-height: 5rem;
+}
+
+.about--left {
+  margin-left: 3rem;
+  width: 55%;
+}
+
+.about--text {
+  font-size: 2rem;
+}
+
+.about__p {
+  margin-top: 1.5rem;
 }
