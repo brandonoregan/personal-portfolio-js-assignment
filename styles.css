@@ -469,7 +469,50 @@ body {
     flex-wrap: nowrap;
     overflow: hidden;
     margin-top: 1rem;
-    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-right: 4rem;
+    position: relative;
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 20px 20px 0;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 3px 3px var(--dark-bg);
+    color: #454545;
+  }
+  /* .arrow--left,
+  .arrow--right {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  } */
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-right: 4rem;
+    position: absolute;
+    top: 10rem;
+    right: -5rem;
+    overflow: visible;
+  }
+
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+    top: 10rem;
+    left: 0.5rem;
+  }
+
+  .arrow__block {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .form__container {
