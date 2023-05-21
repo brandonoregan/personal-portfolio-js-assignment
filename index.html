@@ -19,105 +19,52 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Brandon O'Regan</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <div class="logo__container">
-          <p class="logo">BRANDON O'REGAN</p>
-        </div>
-        <nav class="navbar">
-          <ul class="nav__ul">
-            <li class="nav__li">HOME</li>
-            <li class="nav__li">ABOUT</li>
-            <li class="nav__li">PROJECTS</li>
-            <li class="nav__li">CONTACT</li>
-          </ul>
-        </nav>
+    <header class="header">
+      <div class="logo--container">
+        <p class="logo">BRANDON O'REGAN</p>
       </div>
+      <nav class="navbar">
+        <ul class="nav__ul">
+          <li class="nav__li">HOME</li>
+          <li class="nav__li">ABOUT</li>
+          <li class="nav__li">PROJECTS</li>
+          <li class="nav__li">CONTACT</li>
+        </ul>
+      </nav>
     </header>
-    <body>
-      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-      <div class="body__container">
-        <section class="section home__section">
-          <div class="hero-text__container">
-            <p class="hero-text">
-              Hi, my name is</p>
-              <p class="hero__span--1">Brandon</p>
-              <p class="hero__span--2">O'Regan</p>
-              <p class="hero__span--3">
-                I'm a Software Developer in Dublin.
-              </p>
-            </p>
-            <p class="hero__button">GET IN TOUCH</p>
-          </div>
-
-          <div class="hero-img__container"></div>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section about__section">
-            <h2 class="about--title title">About</h2>
-            <p class="about--text">
-                <!-- As a self proclaimed life long learner, developing a passion for HTML, CSS and JavaScript has been highly energising shift in reality.
-
-                For years as an tradesmen I was tormented by the Australian sun, crawled through more ceiling spaces than I dare to count and had more close encounters with snakes, spiders and electricity then any employee should. And out of the all the potential ways I could’ve died on the job, none of them were the reason for me pursuing a career as a Web Developer. -->
-            </p>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section projects__section">
-            <h2 class="projects--title title">Projects</h2>
-            <p class="projects--text">
-                Take a look at some of my projects, let me know what you think. I love feedback!
-            </p>
-            <div class="arrow__block">
-            </div>
-            <div class="project__flex--container">
-                    <p class="arrow--left"> <i class="arrow left"></i></p>
-                    <div class="project__container html__project pro--1 "></div>
-                    <div class="project__container weather__project pro--2 project__tile--bigger"></div>
-                <div class="project__container mapty__project pro--3"></div>
-                <!-- Fill ins -->
-                <div class="project__container html__project pro--4"></div>
-                <div class="project__container weather__project pro--5"></div>
-                <div class="project__container mapty__project pro--6"></div>
-                <p class="arrow--right"> <i class="arrow right"></i></p>
-                <!-- Fill ins -->
-            </div>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section contact__section">
-          <div class="flex__container">
-            <div class="form__container">
-              <h2 class="contact--title">LET'S TALK</h2>
-              <form class="form" action="">
-                <input class="input" type="text" placeholder="Name" />
-                <input class="input" type="email" placeholder="Enter Email" />
-                <textarea
-                  class="input"
-                  name="message"
-                  type="text"
-                  id=""
-                  placeholder="Your Message"
-                ></textarea>
-                <div class="contact__button--container">
-                  <input
-                    type="submit"
-                    class="submit__button"
-                    id="submitBtn"
-                    value="SUBMIT"
-                  />
-                </div>
-
-                <div class="fun__img"></div>
-              </form>
-            </div>
-          </div>
-        </section>
-      </div>
-    </body>
+    <main>
+      <section class="home__section">
+        <!-- <div class="container"> -->
+        <div class="heroText--container">
+          <p class="hero--text top">Hi, my name is</p>
+          <p class="hero--name firstName">BRANDON</p>
+          <p class="hero--name lastName">O'REGAN</p>
+          <p class="hero--text bottom">I'm a Full Stack Developer</p>
+          <div class="hero__button">GET IN TOUCH</div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="hero__img--container"></div> -->
+      </section>
+      <section class="about__section">
+        <div class="about--left">
+          <h2>About</h2>
+          <p></p>
+        </div>
+        <div class="about--right"></div>
+      </section>
+      <section class="project__section"></section>
+    </main>
   </body>
 </html>
