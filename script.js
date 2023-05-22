@@ -44,29 +44,18 @@ const projectsContainer = document.querySelector(".projects__container");
 let currentTile = 0;
 const maxTile = tiles.length;
 
-// tiles.forEach((tile, i) => (tile.style.transform = `translateX(${100 * i})%`));
-
 btnRight.addEventListener("click", function () {
-  console.log("hey");
-  if (currentTile === maxTile - 1) {
-    currentTile = 0;
-  } else {
-    currentTile++;
-  }
-  tiles.forEach(
-    (tile, i) =>
-      (tile.style.transform = `translateX(${300 * (i + currentTile)}px)`)
-  );
+  currentTile = (currentTile + 1) % maxTile;
+  const translation = -(currentTile * 100) + "%"; // Adjust the translation value based on your tile size
+  tiles.forEach((tile, i) => {
+    tile.style.transform = `translateX(${translation})`;
+  });
 });
 
 btnLeft.addEventListener("click", function () {
-  //   if (currentTile === 0) {
-  //     currentTile = maxTile - 1;
-  //   } else {
-  //     currentTile--;
-  //   }
-  tiles.forEach(
-    (tile, i) =>
-      (tile.style.transform = `translateX(${-300 * (i + currentTile)}px)`)
-  );
+  currentTile = (currentTile - 1 + maxTile) % maxTile;
+  const translation = -(currentTile * 100) + "%"; // Adjust the translation value based on your tile size
+  tiles.forEach((tile, i) => {
+    tile.style.transform = `translateX(${translation})`;
+  });
 });

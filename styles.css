@@ -288,15 +288,12 @@ a {
 
 .projects__container {
   height: 300px;
-  width: calc(100% - 2rem);
-  white-space: nowrap;
   overflow: hidden;
-  /* display: flex;
-  overflow: hidden; */
+  display: flex;
+  position: relative;
   /* flex-grow: 0;
   flex-shrink: 0; */
   /* flex-basis: 300px; */
-  /* transition: transform 1s; */
 }
 
 .projects__button {
@@ -334,11 +331,15 @@ a {
 }
 
 .projects--tile {
+  position: relative;
   border: 2px solid black;
   min-height: 30rem;
-  width: 30rem;
   display: inline-block;
+  flex: 0 0 33.3%;
   margin: auto 0;
+  transition: transform 1s;
+  width: 100%;
+  max-width: 300px;
 }
 
 .projects--title {
