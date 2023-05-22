@@ -33,37 +33,40 @@
   <body>
     <header class="header">
       <div class="logo--container">
-        <p class="logo">BRANDON O'REGAN</p>
+        <!-- <p class="logo">BRANDON O'REGAN</p> -->
+        <div class="logo svg">
+          <img src="img/b--key.png" alt="" />
+        </div>
       </div>
       <nav class="navbar">
         <ul class="nav__ul">
-          <li class="nav__li">HOME</li>
-          <li class="nav__li">ABOUT</li>
-          <li class="nav__li">PROJECTS</li>
-          <li class="nav__li">CONTACT</li>
+          <li class="nav__li home__li">HOME</li>
+          <li class="nav__li about__li">ABOUT</li>
+          <li class="nav__li projects__li">PROJECTS</li>
+          <li class="nav__li contact__li">CONTACT</li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="home__section">
+      <section id="homeSection" class="home__section">
         <!-- <div class="container"> -->
         <div class="heroText--container">
           <p class="hero--text top">Hi, my name is</p>
           <p class="hero--name firstName">BRANDON</p>
           <p class="hero--name lastName">O'REGAN</p>
-          <p class="hero--text bottom">I'm a Full Stack Developer</p>
+          <p class="hero--text bottom">I'm a Full Stack Developer.</p>
           <div class="hero__button">GET IN TOUCH</div>
         </div>
         <!-- </div> -->
         <!-- <div class="hero__img--container"></div> -->
       </section>
-      <section class="section about__section">
+      <section id="aboutSection" class="section about__section">
         <div class="about--left">
           <h2 class="title about--title">About</h2>
           <div class="about--text">
             <p class="about__p">
-              My, name is Brandon O'Regan, I'm a Full Stack Software Engineer
-              who specialises in HTML, CSS & JavaScript.
+              I'm Brandon, I'm a Full Stack Software Engineer who specialises in
+              HTML, CSS & JavaScript.
             </p>
             <!-- For years I worked as    -->
             <!-- <p class="about__p">
@@ -71,32 +74,31 @@
               programming has been a breath of fresh air.
             </p> -->
             <p class="about__p">
-              For years I was a tradesmen. I was tormented by the Australian
-              sun, and had more encounters with snakes, spiders and electricity
-              then any employee ever should.
+              For years I was a tradesmen, tormented by the Australian sun.I've
+              had more encounters with snakes, spiders and electricity then any
+              employee ever should.
             </p>
             <p class="about__p">
-              And in the end, it wasn't the near death experiences that lead me
-              here either. It was something far more subtle that drove me to
-              developing.
+              And despite the constant reminder of death, it was something far
+              for subtle that drove me towards developing.
             </p>
             <p class="about__p">
-              It was the realisation that I was no longer learning and growing.
+              The realisation that I was no longer learning and growing, proved
+              far more potent.
             </p>
             <p class="about__p">
-              Finding a career that, gave me more energy than it took, combining
-              everything I loved about the electrical industry, like problem
-              solving and team work, and that allows me to continuously learn
-              and grow has been a rejuvinating experience.
+              Developing, combined the things I loved about being a tradesmen,
+              learning, problem solving, team work without the near death
+              experiences.
             </p>
-            <p class="about__p">
+            <p class="about__p about__lead">
               Check out some of the projects I've been working on below, and if
               you like what you see, or don't, let me know! I love feedback!
             </p>
           </div>
         </div>
       </section>
-      <section class="section projects__section">
+      <section id="projectsSection" class="section projects__section">
         <h2 class="title projects--title">Projects</h2>
         <div class="section__container">
           <div class="projects__button btn--left">
@@ -115,7 +117,32 @@
           </div>
         </div>
       </section>
-      <section class="section contact__section"></section>
+      <section id="contactSection" class="section contact__section">
+        <h2 class="title contact--title">Contact</h2>
+        <form class="contact__form" action="">
+          <input class="text__input" type="text" placeholder="Name" />
+          <input class="email__input" type="email" placeholder="Email" />
+          <textarea
+            class="textarea__input"
+            name="message"
+            type="text"
+            id="textAreaInput"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+          <div class="contact__button--container">
+            <input
+              type="submit"
+              class="submit__button"
+              id="submitBtn"
+              value="SUBMIT"
+            />
+          </div>
+        </form>
+      </section>
     </main>
+    <footer>
+      <p class="footer--text">&copy Copyright 2023 - Brandon O'Regan</p>
+    </footer>
   </body>
 </html>
