@@ -97,7 +97,7 @@ body {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   /* border: 2px solid black; */
@@ -117,6 +117,19 @@ ul {
 .header {
   display: flex;
   justify-content: space-between;
+}
+
+.section {
+  margin-left: 3rem;
+  margin-top: 6rem;
+}
+
+.title {
+  font-size: 5rem;
+  /* text-shadow: -3px 3px grey; */
+  border-bottom: 2px solid gray;
+  display: inline-block;
+  line-height: 5rem;
 }
 
 .navbar {
@@ -203,23 +216,13 @@ ul {
 .about__section {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 6rem;
   justify-content: space-between;
   background-image: url(img/plant__bg--4--smaller.jpg);
   background-repeat: no-repeat;
   background-position: 100%;
 }
 
-.about--title {
-  font-size: 5rem;
-  /* text-shadow: -3px 3px grey; */
-  border-bottom: 2px solid gray;
-  display: inline-block;
-  line-height: 5rem;
-}
-
 .about--left {
-  margin-left: 3rem;
   width: 55%;
 }
 
@@ -229,4 +232,76 @@ ul {
 
 .about__p {
   margin-top: 1.5rem;
+}
+
+/* project section */
+/* project section */
+/* project section */
+/* project section */
+/* project section */
+
+.section__container {
+  display: flex;
+}
+
+.projects__container {
+  display: flex;
+  overflow: hidden;
+}
+
+.projects__button {
+  height: 30rem;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects--tile {
+  border: 2px solid black;
+  min-height: 30rem;
+  width: 40rem;
+}
+
+.projects--title {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border: none;
+}
+
+.projects--tile {
+  border-radius: 1rem;
+  margin: 0 1rem;
+  min-width: 300px;
+  max-height: 300px;
+}
+
+.tile--1 {
+  background-image: url(img/origin--400.png);
+  background-position: 100%;
+  background-size: 300px 300px;
+}
+
+.tile--2 {
+  background-image: url(img/mapty--400.png);
+  background-position: cover;
+  background-size: 400px 400px;
+}
+
+.tile--3 {
+  background-image: url(img/weather--400.png);
+  background-position: center;
+  background-size: 300px 300px;
+}
+
+.chosen--tile {
+  min-width: 400px;
+  min-height: 400px;
+}
+
+.btn--placeholders {
+  background-size: 400px 400px;
+  border: 2px solid black;
+  background-color: lime;
 }

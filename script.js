@@ -1,9 +1,9 @@
 "use strict";
 
-const projectTiles = document.querySelectorAll(".project__container");
+const projectTiles = document.querySelectorAll(".projects--tile");
 
 projectTiles.forEach(function (container) {
   container.addEventListener("click", function () {
-    container.classList.toggle("project__tile--bigger");
+    container.classList.toggle("chosen--tile");
   });
 });
