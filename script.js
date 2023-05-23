@@ -98,6 +98,20 @@ const processForm = function (e) {
   console.log(newMessage);
 };
 
+const displayModal = function () {
+  const person = messageArr.slice(-1);
+  const firstName = person[0].name.trim().split(" ");
+  console.log(messageArr);
+  //   console.log(firstName);
+  console.log(person);
+  modal.classList.remove("hidden");
+  modalOverlay.classList.remove("hidden");
+  modalText.innerHTML = `
+  Hey ${firstName[0]}, Thanks for the message.<br />I'll be in contact with you
+          shortly!
+  `;
+};
+
 // Event handlers
 // Event handlers
 // Event handlers
@@ -113,6 +127,17 @@ btnLeft.addEventListener("click", function () {
 
 contactForm.addEventListener("submit", function (e) {
   processForm(e);
+  displayModal();
+});
 
-  //   modelPop();
+const modal = document.querySelector(".modal");
+const modalButton = document.querySelector(".modal__button--close");
+const modalText = document.querySelector(".modal--text");
+const modalOverlay = document.querySelector(".modal--overlay");
+
+window.addEventListener("click", function () {
+  if (!modal.classList.contains("hidden")) {
+    modal.classList.add("hidden");
+    modalOverlay.classList.add("hidden");
+  }
 });
