@@ -3,10 +3,6 @@
 const projectTiles = document.querySelectorAll(".projects--tile");
 const projectsContainer = document.querySelector(".projects__container");
 const heroButton = document.querySelector(".hero__button");
-const homeSection = document.getElementById("homeSection");
-const aboutSection = document.getElementById("aboutSection");
-const projectsSection = document.getElementById("projectsSection");
-const contactSection = document.getElementById("contactSection");
 const navbar = document.querySelector(".navbar");
 const tiles = document.querySelectorAll(".projects--tile");
 const btnRight = document.querySelector(".btn--right");
@@ -16,6 +12,12 @@ const submitButton = document.querySelector(".submit__button");
 const textInput = document.querySelector(".text__input");
 const emailInput = document.querySelector(".email__input");
 const textAreaInput = document.querySelector(".textarea__input");
+const header = document.querySelector(".header");
+const homeSection = document.getElementById("homeSection");
+const aboutSection = document.getElementById("aboutSection");
+const projectsSection = document.getElementById("projectsSection");
+const contactSection = document.getElementById("contactSection");
+
 const messageArr = [];
 
 // Add a class that increase tile size
@@ -34,7 +36,11 @@ heroButton.addEventListener("click", function () {
 });
 
 // event listener for nav tabs to smooth scroll
-navbar.addEventListener("click", function (e) {
+header.addEventListener("click", function (e) {
+  if (e.target.nodeName === "IMG") {
+    homeSection.scrollIntoView({ behavior: "smooth" });
+  }
+
   if (e.target.closest("li").innerHTML === "ABOUT") {
     aboutSection.scrollIntoView({ behavior: "smooth" });
   }
