@@ -278,6 +278,7 @@ a {
 
 .section__container {
   display: flex;
+  justify-content: center;
 }
 
 .projects__section {
@@ -291,6 +292,7 @@ a {
   overflow: hidden;
   display: flex;
   position: relative;
+  width: 102rem;
   /* flex-grow: 0;
   flex-shrink: 0; */
   /* flex-basis: 300px; */
@@ -308,8 +310,11 @@ a {
 .btn--left {
   top: 50%;
   left: -4rem;
+  width: 5rem;
 }
+
 .btn--right {
+  width: 5rem;
   top: 50%;
   right: -1rem;
 }
@@ -374,10 +379,14 @@ a {
   background-size: 300px 300px;
 }
 
-.tile--4,
-.tile--5,
+.tile--4 {
+  background-color: red;
+}
+.tile--5 {
+  background-color: blue;
+}
 .tile--6 {
-  background-color: #efeae2;
+  background-color: green;
 }
 
 .chosen--tile {

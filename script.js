@@ -1,6 +1,7 @@
 "use strict";
 
 const projectTiles = document.querySelectorAll(".projects--tile");
+const projectsContainer = document.querySelector(".projects__container");
 const heroButton = document.querySelector(".hero__button");
 const homeSection = document.getElementById("homeSection");
 const aboutSection = document.getElementById("aboutSection");
@@ -39,23 +40,30 @@ navbar.addEventListener("click", function (e) {
 const tiles = document.querySelectorAll(".projects--tile");
 const btnRight = document.querySelector(".btn--right");
 const btnLeft = document.querySelector(".btn--left");
-const projectsContainer = document.querySelector(".projects__container");
 
 let currentTile = 0;
-const maxTile = tiles.length;
+const maxTile = 4;
 
-btnRight.addEventListener("click", function () {
+const translateTileLeft = function () {
   currentTile = (currentTile + 1) % maxTile;
-  const translation = -(currentTile * 100) + "%"; // Adjust the translation value based on your tile size
-  tiles.forEach((tile, i) => {
+  tiles.forEach((tile) => {
+    tile.style.transform = `translateX(-${currentTile * 100}%)`;
+  });
+};
+
+const translateTileRight = function () {
+  currentTile = (currentTile - 1 + maxTile) % maxTile;
+  const translation = `-${currentTile * 100}%`;
+  tiles.forEach((tile) => {
     tile.style.transform = `translateX(${translation})`;
   });
+};
+
+btnRight.addEventListener("click", function () {
+  translateTileLeft();
+  console.log(currentTile);
 });
 
 btnLeft.addEventListener("click", function () {
-  currentTile = (currentTile - 1 + maxTile) % maxTile;
-  const translation = -(currentTile * 100) + "%"; // Adjust the translation value based on your tile size
-  tiles.forEach((tile, i) => {
-    tile.style.transform = `translateX(${translation})`;
-  });
+  translateTileRight();
 });
