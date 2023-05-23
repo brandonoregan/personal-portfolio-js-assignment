@@ -19,107 +19,130 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Brandon O'Regan</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <div class="logo__container">
-          <p class="logo">BRANDON O'REGAN</p>
+    <header class="header">
+      <div class="logo--container">
+        <!-- <p class="logo">BRANDON O'REGAN</p> -->
+        <div class="logo svg">
+          <img class="svg--img" src="img/b--key.png" alt="" />
         </div>
-        <nav class="navbar">
-          <ul class="nav__ul">
-            <li class="nav__li">HOME</li>
-            <li class="nav__li">ABOUT</li>
-            <li class="nav__li">PROJECTS</li>
-            <li class="nav__li">CONTACT</li>
-          </ul>
-        </nav>
       </div>
+      <nav class="navbar">
+        <ul class="nav__ul">
+          <!-- <li class="nav__li home__li">HOME</li> -->
+          <li class="nav__li about__li">ABOUT</li>
+          <li class="nav__li projects__li">PROJECTS</li>
+          <li class="nav__li contact__li">CONTACT</li>
+        </ul>
+      </nav>
     </header>
-    <body>
-      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-      <div class="body__container">
-        <section class="section home__section">
-          <div class="hero-text__container">
-            <p class="hero-text">
-              Hi, my name is</p>
-              <p class="hero__span--1">Brandon</p>
-              <p class="hero__span--2">O'Regan</p>
-              <p class="hero__span--3">
-                I'm a Software Developer in Dublin.
-              </p>
+    <main>
+      <section id="homeSection" class="home__section">
+        <!-- <div class="container"> -->
+        <div class="heroText--container">
+          <p class="hero--text top">Hi, my name is</p>
+          <p class="hero--name firstName">BRANDON</p>
+          <p class="hero--name lastName">O'REGAN</p>
+          <p class="hero--text bottom">I'm a Full Stack Developer.</p>
+          <div class="hero__button">GET IN TOUCH</div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="hero__img--container"></div> -->
+      </section>
+      <section id="aboutSection" class="section about__section">
+        <div class="about--left">
+          <h2 class="title about--title">About</h2>
+          <div class="about--text">
+            <p class="about__p">
+              I'm Brandon, I'm a Full Stack Developer who specialises in HTML,
+              CSS & JavaScript.
             </p>
-            <p class="hero__button">GET IN TOUCH</p>
+            <!-- For years I worked as    -->
+            <p class="about__p">
+              The UCD Professional Academy transformed me from a tradesmen to a
+              Full Stack Developer
+            </p>
+            <p class="about__p">
+              For years, I was tormented by the Australian sun. I also had more
+              encounters with snakes, spiders and electricity then any employee
+              ever should.
+            </p>
+            <p class="about__p">
+              And despite the constant reminder of death, it was something far
+              for subtle that drove me towards developing.
+            </p>
+            <p class="about__p">
+              The realisation that I was no longer learning and growing, proved
+              far more potent.
+            </p>
+            <p class="about__p">
+              Developing, combined the things I loved about being a tradesmen,
+              learning, problem solving, team work without the near death
+              experiences.
+            </p>
+            <p class="about__p about__lead">
+              Check out some of the projects I've been working on below, and if
+              you like what you see, or don't, let me know! I love feedback!
+            </p>
           </div>
-
-          <div class="hero-img__container"></div>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section about__section">
-            <h2 class="about--title title">About</h2>
-            <p class="about--text">
-                As a self proclaimed life long learner, developing a passion for HTML, CSS and JavaScript has been highly energising shift in reality.
-
-                For years as an tradesmen I was tormented by the Australian sun, crawled through more ceiling spaces than I dare to count and had more close encounters with snakes, spiders and electricity then any employee should. And out of the all the potential ways I could’ve died on the job, none of them were the reason for me pursuing a career as a Web Developer.
-            </p>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section projects__section">
-            <h2 class="projects--title title">Projects</h2>
-            <p class="projects--text">
-                Take a look at some of my projects, let me know what you think. I love feedback!
-                Take a look at some of my projects, let me know what you think. I love feedback!
-                Take a look at some of my projects, let me know what you think. I love feedback!
-            </p>
-            <div class="arrow__block">
-            </div>
-            <div class="project__flex--container">
-                    <p class="arrow--left"> <i class="arrow left"></i></p>
-                    <div class="project__container html__project pro--1 "></div>
-                    <div class="project__container weather__project pro--2 project__tile--bigger"></div>
-                <div class="project__container mapty__project pro--3"></div>
-                <!-- Fill ins -->
-                <div class="project__container html__project pro--4"></div>
-                <div class="project__container weather__project pro--5"></div>
-                <div class="project__container mapty__project pro--6"></div>
-                <p class="arrow--right"> <i class="arrow right"></i></p>
-                <!-- Fill ins -->
-            </div>
-        </section>
-        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section class="section contact__section">
-          <div class="flex__container">
-            <div class="form__container">
-              <h2 class="contact--title">LET'S TALK</h2>
-              <form class="form" action="">
-                <input class="input" type="text" placeholder="Name" />
-                <input class="input" type="email" placeholder="Enter Email" />
-                <textarea
-                  class="input"
-                  name="message"
-                  type="text"
-                  id=""
-                  placeholder="Your Message"
-                ></textarea>
-                <div class="contact__button--container">
-                  <input
-                    type="submit"
-                    class="submit__button"
-                    id="submitBtn"
-                    value="SUBMIT"
-                  />
-                </div>
-
-                <div class="fun__img"></div>
-              </form>
-            </div>
+        </div>
+      </section>
+      <section id="projectsSection" class="section projects__section">
+        <h2 class="title projects--title">Projects</h2>
+        <div class="section__container">
+          <div class="projects__button btn--left">
+            <p data="left" class="btn--placeholders left--arrow">&larr;</p>
           </div>
-        </section>
-      </div>
-    </body>
+          <div class="projects__container">
+            <div class="projects--tile tile--1"></div>
+            <div class="projects--tile tile--2 chosen--tile"></div>
+            <div class="projects--tile tile--3"></div>
+            <div class="projects--tile tile--4"></div>
+            <div class="projects--tile tile--5"></div>
+            <div class="projects--tile tile--6"></div>
+          </div>
+          <div class="projects__button btn--right">
+            <p data="right" class="btn--placeholders right--arrow">&rarr;</p>
+          </div>
+        </div>
+      </section>
+      <section id="contactSection" class="section contact__section">
+        <h2 class="title contact--title">Contact</h2>
+        <form class="contact__form" action="">
+          <input class="text__input" type="text" placeholder="Name" />
+          <input class="email__input" type="email" placeholder="Email" />
+          <textarea
+            class="textarea__input"
+            name="message"
+            type="text"
+            id="textAreaInput"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+          <div class="contact__button--container">
+            <input
+              type="submit"
+              class="submit__button"
+              id="submitBtn"
+              value="SUBMIT"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="footer--text">&copy Copyright 2023 - Brandon O'Regan</p>
+    </footer>
   </body>
 </html>
