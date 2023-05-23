@@ -8,6 +8,15 @@ const aboutSection = document.getElementById("aboutSection");
 const projectsSection = document.getElementById("projectsSection");
 const contactSection = document.getElementById("contactSection");
 const navbar = document.querySelector(".navbar");
+const tiles = document.querySelectorAll(".projects--tile");
+const btnRight = document.querySelector(".btn--right");
+const btnLeft = document.querySelector(".btn--left");
+const contactForm = document.querySelector(".contact__form");
+const submitButton = document.querySelector(".submit__button");
+const textInput = document.querySelector(".text__input");
+const emailInput = document.querySelector(".email__input");
+const textAreaInput = document.querySelector(".textarea__input");
+const messageArr = [];
 
 // Add a class that increase tile size
 projectTiles.forEach(function (container) {
@@ -37,21 +46,21 @@ navbar.addEventListener("click", function (e) {
   }
 });
 
-const tiles = document.querySelectorAll(".projects--tile");
-const btnRight = document.querySelector(".btn--right");
-const btnLeft = document.querySelector(".btn--left");
+// Functions
+// Functions
+// Functions
 
 let currentTile = 0;
 const maxTile = 4;
 
-const translateTileLeft = function () {
+const translateLeft = function () {
   currentTile = (currentTile + 1) % maxTile;
   tiles.forEach((tile) => {
     tile.style.transform = `translateX(-${currentTile * 100}%)`;
   });
 };
 
-const translateTileRight = function () {
+const translateRight = function () {
   currentTile = (currentTile - 1 + maxTile) % maxTile;
   const translation = `-${currentTile * 100}%`;
   tiles.forEach((tile) => {
@@ -59,11 +68,45 @@ const translateTileRight = function () {
   });
 };
 
+class Message {
+  constructor(name, email, message) {
+    this.name = name;
+    this.email = email;
+    this.message = message;
+  }
+
+  thankyouMessage() {
+    console.log(`Hey, ${this.name} I'll be in contact with you soon. 😁`);
+  }
+}
+
+const processForm = function (e) {
+  e.preventDefault();
+  const name = textInput.value;
+  const email = emailInput.value;
+  const message = textAreaInput.value;
+  const newMessage = new Message(name, email, message);
+  textInput.value = emailInput.value = textAreaInput.value = "";
+
+  messageArr.push(newMessage);
+  console.log(newMessage);
+};
+
+// Event handlers
+// Event handlers
+// Event handlers
+
 btnRight.addEventListener("click", function () {
-  translateTileLeft();
+  translateLeft();
   console.log(currentTile);
 });
 
 btnLeft.addEventListener("click", function () {
-  translateTileRight();
+  translateRight();
+});
+
+contactForm.addEventListener("submit", function (e) {
+  processForm(e);
+
+  //   modelPop();
 });
