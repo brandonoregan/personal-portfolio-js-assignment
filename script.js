@@ -5,22 +5,22 @@ const projectsContainer = document.querySelector(".projects__container");
 const heroButton = document.querySelector(".hero__button");
 const navbar = document.querySelector(".navbar");
 const tiles = document.querySelectorAll(".projects--tile");
-const btnRight = document.querySelector(".btn--right");
-const btnLeft = document.querySelector(".btn--left");
+const btnRight = document.querySelector(".right--arrow");
+const btnLeft = document.querySelector(".left--arrow");
 const contactForm = document.querySelector(".contact__form");
 const submitButton = document.querySelector(".submit__button");
 const textInput = document.querySelector(".text__input");
 const emailInput = document.querySelector(".email__input");
 const textAreaInput = document.querySelector(".textarea__input");
 const header = document.querySelector(".header");
+const modalButton = document.querySelector(".modal__button--close");
+const modalText = document.querySelector(".modal--text");
+const modalOverlay = document.querySelector(".modal--overlay");
 const homeSection = document.getElementById("homeSection");
 const aboutSection = document.getElementById("aboutSection");
 const projectsSection = document.getElementById("projectsSection");
 const contactSection = document.getElementById("contactSection");
 const modal = document.querySelector(".modal");
-const modalButton = document.querySelector(".modal__button--close");
-const modalText = document.querySelector(".modal--text");
-const modalOverlay = document.querySelector(".modal--overlay");
 
 const messageArr = [];
 
@@ -116,7 +116,10 @@ const checkInput = function () {
   if (
     textInput.value === "" ||
     emailInput.value === "" ||
-    textAreaInput.value === ""
+    textAreaInput.value === "" ||
+    textInput.value === null ||
+    emailInput.value === null ||
+    textAreaInput.value === null
   ) {
     alert("Please fill in all inputs before submitting the form.");
     setTimeout(function () {
