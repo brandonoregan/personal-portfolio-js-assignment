@@ -17,6 +17,10 @@ const homeSection = document.getElementById("homeSection");
 const aboutSection = document.getElementById("aboutSection");
 const projectsSection = document.getElementById("projectsSection");
 const contactSection = document.getElementById("contactSection");
+const modal = document.querySelector(".modal");
+const modalButton = document.querySelector(".modal__button--close");
+const modalText = document.querySelector(".modal--text");
+const modalOverlay = document.querySelector(".modal--overlay");
 
 const messageArr = [];
 
@@ -80,10 +84,6 @@ class Message {
     this.email = email;
     this.message = message;
   }
-
-  thankyouMessage() {
-    console.log(`Hey, ${this.name} I'll be in contact with you soon. 😁`);
-  }
 }
 
 const processForm = function (e) {
@@ -112,6 +112,19 @@ const displayModal = function () {
   `;
 };
 
+const checkInput = function () {
+  if (
+    textInput.value === "" ||
+    emailInput.value === "" ||
+    textAreaInput.value === ""
+  ) {
+    alert("Please fill in all inputs before submitting the form.");
+    setTimeout(function () {
+      contactSection.scrollIntoView({ behavior: "instant" });
+    }, 1);
+  } else return true;
+};
+
 // Event handlers
 // Event handlers
 // Event handlers
@@ -126,14 +139,11 @@ btnLeft.addEventListener("click", function () {
 });
 
 contactForm.addEventListener("submit", function (e) {
-  processForm(e);
-  displayModal();
+  if (checkInput()) {
+    processForm(e);
+    displayModal();
+  }
 });
-
-const modal = document.querySelector(".modal");
-const modalButton = document.querySelector(".modal__button--close");
-const modalText = document.querySelector(".modal--text");
-const modalOverlay = document.querySelector(".modal--overlay");
 
 window.addEventListener("click", function () {
   if (!modal.classList.contains("hidden")) {

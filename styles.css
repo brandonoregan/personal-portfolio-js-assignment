@@ -676,6 +676,7 @@ textarea {
     padding: 0.5rem;
     /* border-radius: 1rem; */
     max-width: 375px;
+    min-width: 375px;
     /* margin: 0 auto; */
     /* position: relative; */
     /* border: 2px solid black; */
