@@ -533,9 +533,133 @@ textarea {
 /* MEDIA QUERIES */
 /* MEDIA QUERIES */
 
-@media (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   body {
     /* background-color: blue; */
+    width: 100vw;
+  }
+
+  main {
+    /* border: 2px solid black; */
+    /* box-shadow: 10px 10px grey; */
+    padding: 2rem;
+    /* border-radius: 1rem; */
+    width: 100vw;
+    /* margin: 0 auto; */
+    /* position: relative; */
+    /* border: 2px solid black; */
+  }
+
+  .section {
+    margin-left: 0;
+    padding-top: 3rem;
+  }
+
+  .header {
+    max-width: 100vw;
+    width: 100vw;
+    margin: 0 auto;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1rem;
+    /* margin-right: ;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999; */
+  }
+  .navbar {
+    width: 100vw;
+    /* display: flex;
+        justify-content: space-between; */
+    /* position: sticky; */
+  }
+
+  .nav__ul {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    font-size: 2rem;
+    /* font-weight: 600;
+    letter-spacing: 2px; */
+  }
+
+  /* home section */
+  /* home section */
+  /* home section */
+
+  .home__section {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(img/plant__bg--3.avif);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 75rem;
+    padding-top: 10rem;
+    margin-left: 0rem;
+
+    /* border: 2px solid black; */
+  }
+
+  /* about section */
+  /* about section */
+  /* about section */
+
+  .about__section {
+    /* display: flex;
+    flex-wrap: wrap; */
+    justify-content: center;
+    background-image: none;
+    /* background-repeat: no-repeat;
+    background-position: 100%; */
+  }
+
+  .about--left {
+    width: 90%;
+  }
+
+  /* project section */
+  /* project section */
+  /* project section */
+
+  .projects__section {
+    /* overflow: hidden; */
+    padding-right: 0;
+    /* position: relative; */
+  }
+
+  .projects__button {
+    display: none;
+  }
+
+  .projects__container {
+    height: auto;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: auto;
+    /* flex-grow: 0;
+    flex-shrink: 0; */
+    /* flex-basis: 300px; */
+  }
+
+  .projects--tile {
+    /* position: relative;
+    border: 2px solid black;
+    min-height: 30rem;
+    display: inline-block;
+    flex: 0 0 33.3%; */
+    margin: 1rem;
+    /* transition: transform 1s;
+    width: 100%;
+    max-width: 300px; */
   }
 }
 
@@ -563,7 +687,7 @@ textarea {
   }
 
   .header {
-    max-width: 375px;
+    max-width: 600px;
     /* width: 100%; */
     /* margin: 0 auto; */
     /* border-radius: 0 0 1rem 1rem; */
