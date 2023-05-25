@@ -26,8 +26,20 @@
       rel="stylesheet"
     />
 
+    <!-- ICON LIBRARY -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Brandon O'Regan</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      defer
+    ></script>
+
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -62,19 +74,19 @@
       </section>
       <section id="aboutSection" class="section about__section">
         <div class="about--left">
-          <h2 class="title about--title">About</h2>
+          <h2 class="title about--title">A little about me...</h2>
           <div class="about--text">
             <p class="about__p">
               Hi, I'm Brandon, I'm a Full Stack Developer who specialises in
               HTML, CSS & JavaScript.
             </p>
             <!-- For years I worked as    -->
-            <!-- <p class="about__p">
-              The UCD Professional Academy transformed me from a tradesmen to a
-              Full Stack Developer
-            </p> -->
             <p class="about__p">
-              For years, I was tormented by the Australian sun. I also had more
+              Before the UCD Professional Academy, transformed me into a Full
+              Stack Developer, I was a trademen.
+            </p>
+            <p class="about__p">
+              For years, I was tormented by the Australian sun and had more
               encounters with snakes, spiders and electricity then any employee
               ever should.
             </p>
@@ -93,7 +105,7 @@
             </p>
             <p class="about__p about__lead">
               Check out some of the projects I've been working on below, and if
-              you like what you see, or don't, let me know! I love feedback!
+              you like what you see, let me know, I'd love to chat.
             </p>
           </div>
         </div>
@@ -116,7 +128,9 @@
         </div>
       </section>
       <section id="contactSection" class="section contact__section">
-        <h2 class="title contact--title">Contact</h2>
+        <div class="contact--title__container">
+          <h2 class="title contact--title">Let's Talk 😃</h2>
+        </div>
         <form class="contact__form" action="">
           <input class="text__input" type="text" placeholder="Name" />
           <input class="email__input" type="email" placeholder="Email" />
@@ -149,7 +163,26 @@
       <div class="modal--overlay hidden"></div>
     </main>
     <footer>
-      <p class="footer--text">&copy Copyright 2023 - Brandon O'Regan</p>
+      <div class="footer__container">
+        <p class="footer--text">&copy Copyright 2023 - Brandon O'Regan</p>
+        <div>
+          <a
+            href="https://github.com/brandonmicah"
+            class="fa fa-github"
+            target="_blank"
+          ></a>
+          <a
+            href="https://www.instagram.com/brandonoregan_/"
+            target="_blank"
+            class="fa fa-instagram"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/brandonoregan/"
+            class="fa fa-linkedin"
+            target="_blank"
+          ></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

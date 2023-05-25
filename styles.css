@@ -126,8 +126,6 @@ main {
   left: 50%;
   transform: translate(-50%);
   z-index: 999;
-
-  /* box-shadow: 7px 7px grey; */
 }
 
 ul {
@@ -142,10 +140,15 @@ ul {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 4rem;
   /* text-shadow: -3px 3px grey; */
   /* display: inline-block; */
-  line-height: 5rem;
+  line-height: 4rem;
+  /* border: 2px solid black; */
+  display: inline-block;
+  /* padding: 0.5rem 2rem; */
+  border-radius: 1rem;
+  /* box-shadow: 5px 5px grey; */
 }
 
 a {
@@ -171,6 +174,7 @@ a {
 
 .nav__li:hover {
   cursor: pointer;
+  color: limegreen;
 }
 
 .svg--img:hover {
@@ -263,11 +267,10 @@ a {
   background-position: 100%;
 }
 
-.about--title {
-  margin-left: 10rem;
+/* .about--title {
   margin: 0 auto;
   text-align: center;
-}
+} */
 
 .about--left {
   width: 55%;
@@ -275,12 +278,16 @@ a {
 
 .about--text {
   font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .about__p {
   margin-top: 1.5rem;
 }
 
+.about__lead {
+  font-weight: 700;
+}
 /* project section */
 /* project section */
 /* project section */
@@ -329,7 +336,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .arrow {
@@ -357,7 +364,7 @@ a {
   /* display: inline-block; */
   /* margin-bottom: 1.5rem; */
   /* text-align: center; */
-  border: none;
+  /* border: 2px solid black; */
   margin: 0 3rem;
 }
 
@@ -429,10 +436,14 @@ textarea {
 }
 
 .contact--title {
-  display: block;
-  margin-bottom: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0 auto 1.5rem;
   text-align: center;
-  border: none;
+}
+
+.contact--title__container {
+  display: flex;
+  justify-content: center;
 }
 
 .submit__button {
@@ -466,8 +477,19 @@ textarea {
   font-size: 2rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
+  margin-right: 3rem;
 }
 
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa {
+  font-size: 4rem;
+  margin: 0 1rem;
+}
 /* modal */
 /* modal */
 /* modal */
@@ -897,5 +919,23 @@ textarea {
   .modal--text {
     font-size: 2rem;
     font-weight: 500;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer--text {
+    margin-right: 0;
+    font-weight: 1rem;
+  }
+
+  .fa {
+    font-size: 3rem;
+    margin: 0.3rem 1rem 1rem;
+  }
+
+  .footer--text {
+    padding: 0;
   }
 }

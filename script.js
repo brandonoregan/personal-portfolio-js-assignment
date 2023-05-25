@@ -154,3 +154,12 @@ window.addEventListener("click", function () {
     modalOverlay.classList.add("hidden");
   }
 });
+
+// GSAP
+// GSAP
+// GSAP
+heroButton.addEventListener("mouseleave", () => {});
+gsap.from(".hero__button", { duration: 1.5, y: 200, ease: "bounce" });
+
+// gsap.from(".firstName", { duration: 1.5, x: 500, ease: "none" });
+gsap.from(".svg--img", { duration: 3, x: 500, ease: "bounce" });
