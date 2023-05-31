@@ -170,17 +170,28 @@ a {
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: 2px;
+  padding: 0;
 }
 
 .nav__li:hover {
   cursor: pointer;
-  color: limegreen;
+  background-color: lightgray;
+}
+
+.nav__li {
+  /* margin-left: 5rem; */
 }
 
 .svg--img:hover {
   cursor: pointer;
 }
 
+/* .nav--underline {
+  border-bottom: 8px solid grey;
+  padding-bottom: 0;
+  text-decoration: underline;
+  text-decoration: ;
+} */
 /* home section */
 /* home section */
 /* home section */
@@ -406,6 +417,13 @@ a {
 .chosen--tile {
   border: 0.5rem solid #00ff00;
 }
+
+/* .projects--modal {
+  height: 3rem;
+  width: %;
+  border: 2px solid black;
+  margin: 0 auto;
+} */
 
 /* contact--section */
 /* contact--section */

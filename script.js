@@ -24,38 +24,6 @@ const modal = document.querySelector(".modal");
 
 const messageArr = [];
 
-// Add a class that increase tile size
-projectTiles.forEach(function (container) {
-  container.addEventListener("click", function () {
-    container.classList.toggle("chosen--tile");
-  });
-});
-
-//EVENTS LISTENERS
-//EVENTS LISTENERS
-//EVENTS LISTENERS
-// Button that smoothy scrolls to contact sections
-heroButton.addEventListener("click", function () {
-  contactSection.scrollIntoView({ behavior: "smooth" });
-});
-
-// event listener for nav tabs to smooth scroll
-header.addEventListener("click", function (e) {
-  if (e.target.nodeName === "IMG") {
-    homeSection.scrollIntoView({ behavior: "smooth" });
-  }
-
-  if (e.target.closest("li").innerHTML === "ABOUT") {
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  }
-  if (e.target.closest("li").innerHTML === "PROJECTS") {
-    projectsSection.scrollIntoView({ behavior: "smooth" });
-  }
-  if (e.target.closest("li").innerHTML === "CONTACT") {
-    contactSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
-
 // Functions
 // Functions
 // Functions
@@ -128,9 +96,52 @@ const checkInput = function () {
   } else return true;
 };
 
-// Event handlers
-// Event handlers
-// Event handlers
+//EVENTS HANDLERS
+//EVENTS HANDLERS
+//EVENTS HANDLERS
+
+// Add a class that increase tile size
+projectTiles.forEach(function (container) {
+  container.addEventListener("click", function () {
+    container.classList.toggle("chosen--tile");
+  });
+});
+
+// Button that smoothy scrolls to contact sections
+heroButton.addEventListener("click", function () {
+  contactSection.scrollIntoView({ behavior: "smooth" });
+});
+
+// event listener for nav tabs to smooth scroll
+header.addEventListener("click", function (e) {
+  if (e.target.nodeName === "IMG") {
+    homeSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  if (e.target.closest("li").innerHTML === "ABOUT") {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  }
+  if (e.target.closest("li").innerHTML === "PROJECTS") {
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  }
+  if (e.target.closest("li").innerHTML === "CONTACT") {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+// const navLi = document.querySelectorAll(".nav__li");
+// const aboutLi = document.querySelector(".about__li");
+
+// aboutLi.addEventListener("mouseenter", function () {
+//   gsap.from(".about__li", { duration: 1.5, y: 200, ease: "bounce" });
+// });
+
+// navLi.forEach(function (item) {
+//   item.addEventListener("mouseenter", function (e) {
+//     const yoza = e.target;
+//     gsap.from("yoza", { duration: 1.5, y: 200, ease: "bounce" });
+//   });
+// });
 
 btnRight.addEventListener("click", function () {
   translateLeft();
