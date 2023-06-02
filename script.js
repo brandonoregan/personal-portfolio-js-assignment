@@ -101,11 +101,12 @@ const checkInput = function () {
 //EVENTS HANDLERS
 
 // Add a class that increase tile size
-projectTiles.forEach(function (container) {
-  container.addEventListener("click", function () {
-    container.classList.toggle("chosen--tile");
-  });
-});
+// projectTiles.forEach(function (container) {
+//   container.addEventListener("click", function () {
+//     container.classList.toggle("chosen--tile");
+//   });
+
+// });
 
 // Button that smoothy scrolls to contact sections
 heroButton.addEventListener("click", function () {
