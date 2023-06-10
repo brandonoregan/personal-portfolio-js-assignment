@@ -180,7 +180,7 @@ gsap.from(".svg--img", { duration: 3, x: 500, ease: "bounce" });
 /* ---- COPIED PARTICLE BG CODE---- */
 /* ---- COPIED PARTICLE BG CODE---- */
 
-particlesJS("homeSectionBg", {
+particlesJS("homeSection", {
   particles: {
     number: {
       value: 200,
