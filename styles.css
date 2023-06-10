@@ -175,7 +175,7 @@ a {
 
 .nav__li:hover {
   cursor: pointer;
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
 .nav__li {
@@ -407,15 +407,18 @@ a {
 .tile--4 {
   background-image: url(img/origin--400.png);
   background-position: 100%;
-  background-size: 300px 300px;}
+  background-size: 300px 300px;
+}
 .tile--5 {
   background-image: url(img/mapty--400.png);
   background-position: cover;
-  background-size: 300px 300px;}
+  background-size: 300px 300px;
+}
 .tile--6 {
   background-image: url(img/weather--400.png);
   background-position: center;
-  background-size: 300px 300px;}
+  background-size: 300px 300px;
+}
 
 .chosen--tile {
   border: 0.5rem solid #00ff00;
