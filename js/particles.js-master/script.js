@@ -270,7 +270,7 @@ particlesJS("homeSection", {
       },
     },
     size: {
-      value: 1.5,
+      value: 3,
       random: true,
       anim: {
         enable: false,
