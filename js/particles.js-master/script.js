@@ -196,10 +196,6 @@ spans.forEach(function (el) {
   });
 });
 
-heroTextContainer.addEventListener("mouseenter", function () {});
-
-console.log(firstNameTitle[0].innerHTML && firstNameTitle[1].innerHTML);
-
 const firstName = btnRight.addEventListener("click", function () {
   translateLeft();
   console.log(currentTile);
