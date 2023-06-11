@@ -109,6 +109,17 @@ main {
   margin: 0 auto;
 }
 
+span {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+span.fade:hover {
+  color: var(--lime);
+  /* opacity: 1; */
+  transform: translateY(-20px);
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -541,6 +552,7 @@ textarea {
   padding-left: 1rem;
   border-radius: 1rem;
   background-color: var(--dark-grey);
+  color: white;
 }
 
 .email__input {

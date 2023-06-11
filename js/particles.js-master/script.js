@@ -144,7 +144,63 @@ header.addEventListener("click", function (e) {
 //   });
 // });
 
-btnRight.addEventListener("click", function () {
+const heroShimmer = function () {
+  const firstNameTitle = document.querySelectorAll(".hero--name");
+
+  const str = firstNameTitle[0];
+  const strOne = firstNameTitle[1];
+
+  const strText = str.textContent;
+  const strTextOne = strOne.textContent;
+
+  const splitText = strText.split("");
+  const splitTextOne = strTextOne.split("");
+  str.textContent = "";
+  strOne.textContent = "";
+
+  for (let i = 0; i < splitText.length; i++) {
+    str.innerHTML += "<span>" + splitText[i] + "</span>";
+    strOne.innerHTML += "<span>" + splitTextOne[i] + "</span>";
+  }
+
+  // let char = 0;
+  // let timer = setInterval(ontick, 50);
+
+  // function ontick() {
+  //   const spans = str.querySelectorAll("span")[char];
+  //   console.log(spans);
+  //   spans.classList.toggle("fade");
+  //   char++;
+  //   if (char === splitText.length) {
+  //     complete();
+  //     return;
+  //   }
+  // }
+
+  // function complete() {
+  //   clearInterval(timer);
+  //   timer;
+  // }
+};
+
+heroShimmer();
+
+const spans = document.querySelectorAll("span");
+
+spans.forEach(function (el) {
+  el.addEventListener("mouseenter", function () {
+    el.classList.add("fade");
+  });
+  el.addEventListener("mouseleave", function () {
+    el.classList.remove("fade");
+  });
+});
+
+heroTextContainer.addEventListener("mouseenter", function () {});
+
+console.log(firstNameTitle[0].innerHTML && firstNameTitle[1].innerHTML);
+
+const firstName = btnRight.addEventListener("click", function () {
   translateLeft();
   console.log(currentTile);
 });
