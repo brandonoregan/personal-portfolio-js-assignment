@@ -366,7 +366,6 @@ a {
 }
 
 .projects__section {
-  padding-right: 2rem;
   position: relative;
   background-color: var(--dark-grey);
   max-width: 1200px;
