@@ -1,7 +1,7 @@
 # UCD JavaScript Assignment - Personal Portfolio Website
 
 ## Project Concept
-The concept is very straight forward I have designed a personal portfolio website. This aligns with my goals to acquire a job in the software engineering industry. I wanted the design to be simple, no overwhelming or distracting and unnecessary, features. It will clearly outline the objective of the website, and have simple easy to use interactive components using JavaScript. 
+The Project is a Personal Portfolio Website. The concept is fairly self explanatory, it is a web page that serves to display evidence of my programming ability. This aligns with my goals to acquire a job in the software engineering industry. 
 
 ## Features
 ### The website is a single page website with 6 sections, each listed below with interactive elements:
@@ -16,6 +16,7 @@ The concept is very straight forward I have designed a personal portfolio websit
     - JavaScript features
         - Event with button on page load
         - Interactive button that smooth scrolls to contact section
+        - Mouse enter and leave events on hero title.
 - **About section**
     - A small more in depth summary that identifies the purpose of the page and who I am and delivers the critical information 
 - **Projects section**
