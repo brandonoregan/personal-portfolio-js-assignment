@@ -80,6 +80,12 @@ const displayModal = function () {
   `;
 };
 
+const returnTo = function () {
+  setTimeout(function () {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }, 1);
+};
+
 const checkInput = function () {
   if (
     textInput.value === "" ||
@@ -90,27 +96,39 @@ const checkInput = function () {
     textAreaInput.value === null
   ) {
     alert("Please fill in all inputs before submitting the form.");
-    setTimeout(function () {
-      contactSection.scrollIntoView({ behavior: "instant" });
-    }, 1);
+    returnTo();
   } else return true;
 };
 
-//EVENTS HANDLERS
-//EVENTS HANDLERS
-//EVENTS HANDLERS
+const letterWrap = function () {
+  const firstNameTitle = document.querySelectorAll(".hero--name");
 
-// Add a class that increase tile size
-// projectTiles.forEach(function (container) {
-//   container.addEventListener("click", function () {
-//     container.classList.toggle("chosen--tile");
-//   });
+  const str = firstNameTitle[0];
+  const strOne = firstNameTitle[1];
 
-// });
+  const strText = str.textContent;
+  const strTextOne = strOne.textContent;
+
+  const splitText = strText.split("");
+  const splitTextOne = strTextOne.split("");
+  str.textContent = "";
+  strOne.textContent = "";
+
+  for (let i = 0; i < splitText.length; i++) {
+    str.innerHTML += "<span>" + splitText[i] + "</span>";
+    strOne.innerHTML += "<span>" + splitTextOne[i] + "</span>";
+  }
+};
+
+letterWrap();
+
+//EVENTS HANDLERS
+//EVENTS HANDLERS
+//EVENTS HANDLERS
 
 // Button that smoothy scrolls to contact sections
 heroButton.addEventListener("click", function () {
-  contactSection.scrollIntoView({ behavior: "smooth" });
+  aboutSection.scrollIntoView({ behavior: "smooth" });
 });
 
 // event listener for nav tabs to smooth scroll
@@ -129,61 +147,6 @@ header.addEventListener("click", function (e) {
     contactSection.scrollIntoView({ behavior: "smooth" });
   }
 });
-
-// const navLi = document.querySelectorAll(".nav__li");
-// const aboutLi = document.querySelector(".about__li");
-
-// aboutLi.addEventListener("mouseenter", function () {
-//   gsap.from(".about__li", { duration: 1.5, y: 200, ease: "bounce" });
-// });
-
-// navLi.forEach(function (item) {
-//   item.addEventListener("mouseenter", function (e) {
-//     const yoza = e.target;
-//     gsap.from("yoza", { duration: 1.5, y: 200, ease: "bounce" });
-//   });
-// });
-
-const heroShimmer = function () {
-  const firstNameTitle = document.querySelectorAll(".hero--name");
-
-  const str = firstNameTitle[0];
-  const strOne = firstNameTitle[1];
-
-  const strText = str.textContent;
-  const strTextOne = strOne.textContent;
-
-  const splitText = strText.split("");
-  const splitTextOne = strTextOne.split("");
-  str.textContent = "";
-  strOne.textContent = "";
-
-  for (let i = 0; i < splitText.length; i++) {
-    str.innerHTML += "<span>" + splitText[i] + "</span>";
-    strOne.innerHTML += "<span>" + splitTextOne[i] + "</span>";
-  }
-
-  // let char = 0;
-  // let timer = setInterval(ontick, 50);
-
-  // function ontick() {
-  //   const spans = str.querySelectorAll("span")[char];
-  //   console.log(spans);
-  //   spans.classList.toggle("fade");
-  //   char++;
-  //   if (char === splitText.length) {
-  //     complete();
-  //     return;
-  //   }
-  // }
-
-  // function complete() {
-  //   clearInterval(timer);
-  //   timer;
-  // }
-};
-
-heroShimmer();
 
 const spans = document.querySelectorAll("span");
 
@@ -209,6 +172,7 @@ contactForm.addEventListener("submit", function (e) {
   if (checkInput()) {
     processForm(e);
     displayModal();
+    returnTo();
   }
 });
 
@@ -225,7 +189,6 @@ window.addEventListener("click", function () {
 heroButton.addEventListener("mouseleave", () => {});
 gsap.from(".hero__button", { duration: 1.5, y: 200, ease: "bounce" });
 
-// gsap.from(".firstName", { duration: 1.5, x: 500, ease: "none" });
 gsap.from(".svg--img", { duration: 3, x: 500, ease: "bounce" });
 
 /* ---- COPIED PARTICLE BG CODE---- */
