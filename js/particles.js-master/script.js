@@ -29,7 +29,7 @@ const messageArr = [];
 // Functions
 
 let currentTile = 0;
-const maxTile = 4;
+const maxTile = 2;
 
 const translateLeft = function () {
   currentTile = (currentTile + 1) % maxTile;
